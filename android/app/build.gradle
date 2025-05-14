@@ -93,6 +93,17 @@ android {
             keyPassword 'android'
         }
     }
+    flavorDimensions "brand"
+    productFlavors {
+        vestel {
+            dimension "brand"
+            applicationId "com.vestel.app"
+        }
+        im {
+            dimension "brand"
+            applicationId "com.im.app"
+        }
+    }
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
@@ -103,6 +114,17 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+
+    sourceSets {
+        vestel {
+            res.srcDirs = ['src/vestel/res', 'src/main/res']
+            manifest.srcFile 'src/vestel/AndroidManifest.xml'
+        }
+        im {
+            res.srcDirs = ['src/im/res', 'src/main/res']
+            manifest.srcFile 'src/im/AndroidManifest.xml'
         }
     }
 }
