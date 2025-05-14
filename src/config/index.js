@@ -1,10 +1,10 @@
-import {vestelConfig} from './vestel';
+import {imConfig} from './im';
 
 // This can be set through environment variables or build configuration
-const BRAND = 'vestel';
+const BRAND = 'im';
 
 export const getConfig = () => {
-  return vestelConfig;
+  return imConfig;
 };
 
 export const config = getConfig();

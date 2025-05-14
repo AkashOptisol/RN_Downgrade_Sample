@@ -95,9 +95,9 @@ android {
     }
     flavorDimensions "brand"
     productFlavors {
-        vestel {
+        im {
             dimension "brand"
-            applicationId "com.vestel.app"
+            applicationId "com.im.app"
         }
     }
     buildTypes {
@@ -113,9 +113,9 @@ android {
         }
     }
     sourceSets {
-        vestel {
-            res.srcDirs = ['src/vestel/res', 'src/main/res']
-            manifest.srcFile 'src/vestel/AndroidManifest.xml'
+        im {
+            res.srcDirs = ['src/im/res', 'src/main/res']
+            manifest.srcFile 'src/im/AndroidManifest.xml'
         }
     }
 }
